@@ -1,4 +1,4 @@
-#' API for the population in Linköping population from year 1970 and 2020
+#' API for the population in Linkoping population from year 1970 and 2020
 #'
 #' The function returns a data.frame with variables year, gender and the population count.
 #' @return Returns a data.frame with population data in Linköping
