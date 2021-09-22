@@ -1,3 +1,11 @@
+#' API for the population in Linköping population from year 1970 and 2020
+#'
+#' The function returns a data.frame with variables year, gender and the population count.
+#' @return Returns a data.frame with population data in Linköping
+#' @export
+#'
+#' @examples
+#' pop <- linkoping_pop()
 linkoping_pop <- function(){
 
   data <- httr::GET("https://api.kolada.se/v2/data/municipality/0580/kpi/N01951")
