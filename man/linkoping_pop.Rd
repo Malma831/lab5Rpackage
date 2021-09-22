@@ -2,7 +2,7 @@
 % Please edit documentation in R/linkoping_pop_api.R
 \name{linkoping_pop}
 \alias{linkoping_pop}
-\title{API for the population in Linköping population from year 1970 and 2020}
+\title{API for the population in Linkoping population from year 1970 and 2020}
 \usage{
 linkoping_pop()
 }
