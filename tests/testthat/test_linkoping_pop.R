@@ -6,6 +6,7 @@ test_that("Variables names are correct", {
   expect_equal(colnames(data), c("Year","gender","value"))
   expect_equal(length(data),3)
 
+
 })
 
 test_that("Class is correct", {
@@ -29,6 +30,19 @@ test_that("Variables types are correct", {
 })
 
 
+test_that("Dimensions of the data.fram are correct", {
+  data<-linkoping_pop()
+
+  expect_equal(nrow(data)>0 ,TRUE)
+  expect_equal(ncol(data)>0 ,TRUE)
 
 
+})
 
+test_that("Assumptions about the gender variable are correct", {
+  data<-linkoping_pop()
+
+  expect_equal(all(levels(data$gender) %in% c("M", "K", "T")) ,TRUE)
+  expect_equal(length(levels(data$gender))== 3 ,TRUE)
+
+})
