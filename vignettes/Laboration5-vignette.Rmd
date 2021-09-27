@@ -17,3 +17,24 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(lab5Rpackage)
 ```
+
+This package downloads data from uses the API from [Kolada](https://www.linkoping.se/open/data/nyckeltal-fran-kolada/).
+
+
+```{r, echo=TRUE}
+data<-linkoping_pop()
+head(data)
+```
+   
+The data contains the change in population numbers from the years 1970 to 2020. The function `linkoping_pop()` access the API and returns a data.frame containing the variables, year, gender and the population count for males, females and total.
+
+
+
+# Shiny App
+
+```{r, echo=TRUE,eval=FALSE}
+shiny::runGitHub("ShinyApp", "malma831", ref = "main")
+```
+The shiny app creates interactivity with the data, allowiing the user to visualize the time series of the number of female, male and total inhabitants in Linköping. Furthermore, the app allows pairwise comparison of the population count.
+
+
